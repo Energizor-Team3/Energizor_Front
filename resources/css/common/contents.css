@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 main{
     width: 1500px;
@@ -6,6 +6,8 @@ main{
     justify-content: center;
     padding: 50px 0;
     margin: 0 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 .content{
@@ -92,6 +94,9 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    text-align: center;
+
+
 }
 
 table thead{
@@ -100,18 +105,34 @@ table thead{
     margin: 0;
     border-top: 1px solid rgb(156, 156, 156);
     border-bottom: 1px solid rgb(156, 156, 156);
+    text-align: center;
+
 }
 
 table thead th , table tbody tr td{
     padding: 8px 5px;
+
+    
+}
+table tbody tr td:first-child{
+    max-width: 30px;
+    min-width: 30px;
 }
 
-/* table thead th input[type="checkbox"]{
-    margin-left: 10px;
-} */
+table tbody tr td{
+    max-width: 80px;
+    min-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
-table thead th:nth-child(3) {
-    width: 600px;
+table tbody tr td:nth-child(3){
+    min-width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 table tbody tr{
