@@ -1,0 +1,76 @@
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 50px 0; */
+    /* margin: 0 10px; */
+    background-color:antiquewhite;
+}
+
+#menu_1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    /* align-items: center; */
+}
+
+#menu_1 span{ 
+    /* vertical-align: middle; */
+    margin-top: -2px;
+    margin-left: 10px;
+    font-size: 23px;
+    color:#415CBE;
+    font-weight: bold;
+
+}
+.cal_btn{
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 15px 25px;
+    background-color: #94A9FF;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    width: 140px;
+    cursor: pointer;
+  }
+#calendar{
+    width: 70%;
+    border: solid 3px aqua;
+    
+}
+.cal_nav{
+    margin-top: 10px;
+}
+.cal_nav li{
+    margin-left: 20px;
+}
+
+  
+
+#schedule{
+    width: 30%;
+    border: solid 3px brown;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
