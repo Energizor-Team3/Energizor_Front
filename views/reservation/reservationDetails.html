@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/resources/js/common/header.js"></script>
+    <script src="/resources/js/common/contents.js"></script>
+    <script src="/resources/js/reservation/reservationDetail.js"></script>
+    <link rel="stylesheet" href="/resources/css/common/header.css" />
+    <link rel="stylesheet" href="/resources/css/common/contents.css" />
+    <link rel="stylesheet" href="/resources/css/reservation/reservationDetails.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1><img src="/resources/images/Logo.png" alt="" /></h1>
+        <nav>
+          <div id="main_list_icon">
+            <div>
+              <a href="#"><img src="/resources/images/Home.png" alt="" /></a
+              ><span>홈</span>
+            </div>
+            <div>
+              <a href="#"><img src="/resources/images/Approval.png" alt="" /></a
+              ><span>전자결재</span>
+            </div>
+            <div>
+              <a href="#"
+                ><img src="/resources/images/Attendance.png" alt="" /></a
+              ><span>근태관리</span>
+            </div>
+            <div>
+              <a href="#"><img src="/resources/images/calendar.png" alt="" /></a
+              ><span>일정관리</span>
+            </div>
+            <div>
+              <a href="#"><img src="/resources/images/Address.png" alt="" /></a
+              ><span>주소록</span>
+            </div>
+            <div>
+              <a href="#"
+                ><img src="/resources/images/Organization.png" alt="" /></a
+              ><span>조직도</span>
+            </div>
+            <div>
+              <a href="#"><img src="/resources/images/Mail.png" alt="" /></a
+              ><span>쪽지</span>
+            </div>
+            <div>
+              <a href="#"
+                ><img src="/resources/images/Messanger.png" alt="" /></a
+              ><span>메신저</span>
+            </div>
+            <div>
+              <a href="#"
+                ><img src="/resources/images/reservation.png" alt="" /></a
+              ><span>자원예약</span>
+            </div>
+            <div>
+              <a href="#"><img src="/resources/images/board.png" alt="" /></a
+              ><span>게시판</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section>
+        <article>
+          <h2>자원예약</h2>
+          <div>
+            <button class="btn">예약신청</button>
+          </div>
+          <ul class="sub_list">
+            <li>
+              <div>
+                <img src="/resources/images/Approval.png" alt="" />
+                <span class="textcolor">예약현황</span>
+              </div>
+            </li>
+            <li class="sub_list_text">
+              <div>
+                <img src="/resources/images/Approval.png" alt="" />
+                <span>내예약내역</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+      
+      </section>
+      <main>
+        <div class="content">
+          <div class="subject">
+            <strong>내 예약내역</strong>
+           
+            <div class="line"></div>
+          </div>
+
+          <div class="select_line"></div>
+
+         
+          <div id="contentBox" class="content-box">
+            <!-- 수정과 취소 버튼을 감싸는 div -->
+            <div class="action-buttons" style="display: none;">
+              <button id="editReservationButton" >예약수정</button>
+              <button id="cancelReservationButton">예약취소</button>
+            </div>
+            <!-- 상태에 따라 안내 메시지를 표시하는 div -->
+            <div class="statustitle"></div>
+          </div>
+
+          <!-- 여기 자원예약 수정페이지 -->
+    <div id="reservationEditContainer" style="display: none;">
+     
+      <form id="reservationEditForm">
+        <label for="place">장소:</label>
+        <input type="text" id="place" name="place" required><br>
+    
+        <label for="reason">신청사유:</label>
+        <textarea id="reason" name="reason" required></textarea><br>
+    
+        <label for="startDate">사용시작일시:</label>
+        <input type="datetime-local" id="startDate" name="startDate" required><br>
+    
+        <label for="endDate">사용종료일시:</label>
+        <input type="datetime-local" id="endDate" name="endDate" required><br>
+    
+        <button type="button" id="saveReservationButton">저장</button>
+        <button type="button" id="cancelEditButton">취소</button>
+      </form>
+    </div>
+          
+
+          <table>
+            <thead>
+              <th></th>
+              <th>장소</th>
+              <th>신청사유</th>
+              <th>사용시작일시</th>
+              <th>사용종료일시</th>
+              <th>상태</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="radio" name="resRadio" /></td>
+                <td>PROJECT ROOM</td>
+                <td>프로젝트 회의</td>
+                <td>2024-01-05 14:20</td>
+                <td>2024-01-05 14:20</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="resRadio" /></td>
+                <td>GREEN ROOM</td>
+                <td>프로젝트 회의</td>
+                <td>2024-01-05 14:20</td>
+                <td>2024-01-05 14:20</td>
+                <td>진행중</td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="resRadio" /></td>
+                <td>BLUE ROOM</td>
+                <td>프로젝트 회의</td>
+                <td>2024-01-05 14:20</td>
+                <td>2024-01-05 14:20</td>
+                <td>대기</td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="resRadio" /></td>
+                <td>BLUE ROOM</td>
+                <td>프로젝트 회의</td>
+                <td>2024-01-05 14:20</td>
+                <td>2024-01-05 14:20</td>
+                <td>대기</td>
+              </tr>
+            </tbody>
+          </table>
+          
+
+          <select name="page_number_choice" id="page_number_choice">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+          <label class="page_number_choice_text" for="page_number_choice"
+            >페이지당 항목수</label
+          >
+        </div>
+      </main>
+    </div>
+
+    
+   
+  </body>
+</html>
