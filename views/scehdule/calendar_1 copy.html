@@ -4,21 +4,204 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/resources/js/common/header.js"></script>
+  <script src="/resources/js/common/contents.js"></script>
+  <script src="/resources/js/calendar/index.global.js"></script>
+  <link rel="stylesheet" href="/resources/css/common/header.css">
+  <link rel="stylesheet" href="/resources/css/schedule/calendar.css">
 </head>
 <body>
+
+  <div id="wrap">
+    <header>
+      <h1><img src="/resources/images/Logo.png" alt=""></h1>
+      <nav>
+        <div id="main_list_icon">
+          <div>
+            <a href="#" ><img src="/resources/images/Home.png" alt=""></a><span>홈</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Approval.png" alt=""></a><span>전자결재</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Attendance.png" alt=""></a><span>근태관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/calendar.png" alt=""></a><span>일정관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Address.png" alt=""></a><span>주소록</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Organization.png" alt=""></a><span>조직도</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Mail.png" alt=""></a><span>쪽지</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Messanger.png" alt=""></a><span>메신저</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/reservation.png" alt=""></a><span>자원예약</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/board.png" alt=""></a><span>게시판</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <h2 class="menu_schedule">일정관리</h2>
+        <div id="menu_1">
+          <a href="#"><img src="/resources/images/calendarIcon.png" alt=""></a><span>캘린더</span>
+        </div>
+        <div>
+          <button class="cal_btn">쪽지쓰기</button>
+          <button class="cal_btn">캘린더 설정</button>
+        </div>
+
+
+        <nav class="cal_nav">
+          <ul class="cal_ul">
+            <li>
+              <input type="checkbox" id="allcal_checkbox">
+              <label for="allcal_checkbox">전체일정</label>
+            </li>
+            <li class="cal_menu"><a href="#내캘린더">내 캘린더</a>
+              <ul>
+                <li>
+                  <input type="checkbox" id="cal_checkbox_1">
+                  <label for="cal_checkbox_1">개인일정<span class="dot" style=" background-color: red"></span></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="cal_checkbox_2">
+                  <label for="cal_checkbox_2">외부일정<span class="dot" style=" background-color: blue"></span></label>
+                </li>
+              </ul>
+            </li>
+            <li class="cal_menu"><a href="#내캘린더">공유 캘린더</a>
+              <ul>
+                <li>
+                  <input type="checkbox" id="companysch_cb">
+                  <label for="companysch_cb">회사일정<span class="dot_2" style=" background-color: orange"></span></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="departsch_cb">
+                  <label for="departsch_cb">부서일정<span class="dot_2" style=" background-color: green"></label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+        
+      </article>
+    </section>
+
+    <main>
+      
+      <div id='calendar'></div>
+      <div id="schedule">
+        <span id="selected_date">2024년 1월 13일</span><span id="schedule_count">1</span>
+        <div class="schedule_box">
+            <div class="schbox_top">
+              <div class="sch_time">
+                  <div id="sch_start_date">1월3일 10:00</div><span>~</span><div id="sch_end_date">1월3일 11:00</div>
+              </div>
+              <img src="/resources/images/editIcon 1.png" alt="editIcon" class="editbtn">
+              <img src="/resources/images/trash 1.png" alt="editIcon" class="deletebtn">
+          </div>
+        </div>
+
+
+      </div>
+    
+    </main>
   
-  <nav class="cal_nav">
-    <ul>
-        <li><a href="#전체일정">전체일정</a></li>
-        <li><a href="#내캘린더">내 캘린더</a>
-            <ul>
-                <li><a href="#개인일정">개인일정</a></li>
-                <li><a href="#외부일정">외부일정</a></li>
-            </ul>
-        </li>
-        <li><a href="#공유캘린더">공유 캘린더</a></li>
-    </ul>
-</nav>
-  
+
+    <script>
+      document.querySelectorAll('.cal_ul li.cal_menu > a').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.parentNode.classList.toggle('cal_menu');
+        });
+      });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialDate: '2023-01-12',
+    editable: true,
+    selectable: true,
+    businessHours: true,
+    dayMaxEvents: true, // allow "more" link when too many events
+    events: [
+      {
+        title: 'All Day Event',
+        start: '2023-01-01'
+      },
+      {
+        title: 'Long Event',
+        start: '2023-01-07',
+        end: '2023-01-10'
+      },
+      {
+        groupId: 999,
+        title: 'Repeating Event',
+        start: '2023-01-09T16:00:00'
+      },
+      {
+        groupId: 999,
+        title: 'Repeating Event',
+        start: '2023-01-16T16:00:00'
+      },
+      {
+        title: 'Conference',
+        start: '2023-01-11',
+        end: '2023-01-13'
+      },
+      {
+        title: 'Meeting',
+        start: '2023-01-12T10:30:00',
+        end: '2023-01-12T12:30:00'
+      },
+      {
+        title: 'Lunch',
+        start: '2023-01-12T12:00:00'
+      },
+      {
+        title: 'Meeting',
+        start: '2023-01-12T14:30:00'
+      },
+      {
+        title: 'Happy Hour',
+        start: '2023-01-12T17:30:00'
+      },
+      {
+        title: 'Dinner',
+        start: '2023-01-12T20:00:00'
+      },
+      {
+        title: 'Birthday Party',
+        start: '2023-01-13T07:00:00'
+      },
+      {
+        title: 'Click for Google',
+        url: 'http://google.com/',
+        start: '2023-01-28'
+      }
+    ]
+  });
+
+  calendar.render();
+});
+
+
+    </script>
 </body>
 </html>

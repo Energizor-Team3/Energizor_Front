@@ -3,20 +3,22 @@ body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 .menu_schedule{
+    margin-top: -20px;
     font-weight: 800;
 }
 main{
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top:30px;
     /* padding: 50px 0; */
     /* margin: 0 10px; */
-    background-color:antiquewhite;
+    /* background-color:rgb(249, 249, 249); */
 }
 
 #menu_1{
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     /* align-items: center; */
 }
@@ -31,23 +33,26 @@ main{
 
 }
 .cal_btn{
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 16px;
-    padding: 15px 25px;
+    padding: 15px;
     background-color: #94A9FF;
     border-radius: 6px;
     border: none;
     color: white;
     width: 140px;
     cursor: pointer;
+    font-weight: bold;
   }
 #calendar{
     width: 70%;
-    border: solid 3px aqua;
+    height: 100%;
+    margin:10px;
+    /* border: solid 3px aqua; */
     
 }
 .cal_nav{
-    margin-top: 30px;
+    margin-top: 20px;
 
 }
 .cal_nav li{
@@ -62,7 +67,7 @@ main{
   }
 
   /* 클릭 시 중첩된 목록 표시 또는 숨김 */
-  .cal_ul li.active > ul {
+  .cal_ul li.cal_menu > ul {
     display: block;
   }
 
@@ -75,10 +80,10 @@ main{
   }
 
   /* 클릭 시 ">" 아이콘 회전 */
-  .cal_ul li.active > a::before {
+  .cal_ul li.cal_menu > a::before {
     transform: rotate(90deg);
   }
-  .cal_ul li.active .dot {
+  .cal_ul li.cal_menu .dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -86,7 +91,7 @@ main{
     display: inline-block;
     margin-left: 5px;
   }
-  .cal_ul li.active .dot_2 {
+  .cal_ul li.cal_menu .dot_2 {
     width: 15px;
     height: 11px;
     border-radius: 40%;
@@ -94,22 +99,100 @@ main{
     display: inline-block;
     margin-left: 5px;
   }
-#schedule{
-    width: 30%;
-    border: solid 3px brown;
 
+
+
+/* 달력부분 */
+
+#calendar {
+  width: 70%;
+  padding: 10px;
+  height: 750px;
+  border: 1px solid rgb(231, 229, 229);
+}
+.fc .fc-button-primary {
+  background-color: white;
+  border: none;
+  color: #415CBE;
+  font-weight: bold;
+}
+.fc .fc-button-primary:hover{
+  background-color: #415CBE;
+}
+.fc-daygrid-day.fc-day-today{
+  color: #ffffff;
+
+}
+.fc-day{
+  color: gray;
+}
+.fc-day-sun{
+  color: red;
+}
+.fc-day-sat{
+  color: #415CBE;
 }
 
 
+#fc-dom-1{
+  color: #42414a;
+}
+/* .fc-non-business{
+  background-color: #F8F8F8;
+} */
+/* .fc .fc-toolbar.fc-header-toolbar{ */
+/* background-color: #415CBE; */
+/* margin-bottom: 0px; */
+/* margin-top: -10px; */
+/* }  */
 
 
 
 
+/* 일정 부분 */
+#schedule{
+  width: 30%;
+  border: solid 1px #E9EAEC;
+  margin: 10px;
+  padding: 10px;
 
+}
 
+#schedule_count {
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
 
+  padding-top: 1.5px;
+  text-align: center;
+  background-color: #415CBE;
+  color: white;
+}
+#selected_date{
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+.sch_time{
+  display: flex;
+  color: #696868;
+  font-size: 13px;
 
-
+}
+.schedule_box{
+  border: 1px solid rgb(214, 213, 213);
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.schbox_top{
+  display: flex;
+  /* justify-content: space-between; */
+  
+}
 
 
 

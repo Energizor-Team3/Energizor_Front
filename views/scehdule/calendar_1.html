@@ -66,30 +66,30 @@
         <nav class="cal_nav">
           <ul class="cal_ul">
             <li>
-              <input type="checkbox" id="외부일정_checkbox">
-              <label for="외부일정_checkbox"><a href="#외부일정">전체일정</a></label>
+              <input type="checkbox" id="allcal_checkbox">
+              <label for="allcal_checkbox">전체일정</label>
             </li>
-            <li class="active"><a href="#내캘린더">내 캘린더</a>
+            <li class="cal_menu"><a href="#내캘린더">내 캘린더</a>
               <ul>
                 <li>
-                  <input type="checkbox" id="내캘린더_개인일정_checkbox">
-                  <label for="내캘린더_개인일정_checkbox"><a href="#내캘린더_개인일정">개인일정</a><span class="dot" style=" background-color: red"></span></label>
+                  <input type="checkbox" id="cal_checkbox_1">
+                  <label for="cal_checkbox_1">개인일정<span class="dot" style=" background-color: red"></span></label>
                 </li>
                 <li>
-                  <input type="checkbox" id="내캘린더_외부일정_checkbox">
-                  <label for="내캘린더_외부일정_checkbox"><a href="#내캘린더_외부일정">외부일정</a><span class="dot" style=" background-color: blue"></span></label>
+                  <input type="checkbox" id="cal_checkbox_2">
+                  <label for="cal_checkbox_2">외부일정<span class="dot" style=" background-color: blue"></span></label>
                 </li>
               </ul>
             </li>
-            <li class="active"><a href="#공유캘린더">공유 캘린더</a>
+            <li class="cal_menu"><a href="#내캘린더">공유 캘린더</a>
               <ul>
                 <li>
-                  <input type="checkbox" id="공유캘린더_개인일정_checkbox">
-                  <label for="공유캘린더_개인일정_checkbox"><a href="#공유캘린더_개인일정">개인일정</a><span class="dot_2" style=" background-color: orange"></span></label>
+                  <input type="checkbox" id="companysch_cb">
+                  <label for="companysch_cb">회사일정<span class="dot_2" style=" background-color: orange"></span></label>
                 </li>
                 <li>
-                  <input type="checkbox" id="공유캘린더_외부일정_checkbox">
-                  <label for="공유캘린더_외부일정_checkbox"><a href="#공유캘린더_외부일정">외부일정</a><span class="dot_2" style=" background-color: green"></label>
+                  <input type="checkbox" id="departsch_cb">
+                  <label for="departsch_cb">부서일정<span class="dot_2" style=" background-color: green"></label>
                 </li>
               </ul>
             </li>
@@ -108,10 +108,10 @@
   
 
     <script>
-      document.querySelectorAll('.cal_ul li.active > a').forEach(function(item) {
+      document.querySelectorAll('.cal_ul li.cal_menu > a').forEach(function(item) {
         item.addEventListener('click', function(e) {
           e.preventDefault();
-          this.parentNode.classList.toggle('active');
+          this.parentNode.classList.toggle('cal_menu');
         });
       });
     </script>
