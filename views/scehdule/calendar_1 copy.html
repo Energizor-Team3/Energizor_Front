@@ -59,7 +59,7 @@
           <a href="#"><img src="/resources/images/calendarIcon.png" alt=""></a><span>캘린더</span>
         </div>
         <div>
-          <button class="cal_btn">쪽지쓰기</button>
+          <button class="cal_btn">일정추가</button>
           <button class="cal_btn">캘린더 설정</button>
         </div>
 
@@ -106,15 +106,43 @@
       <div id='calendar'></div>
       <div id="schedule">
         <span id="selected_date">2024년 1월 13일</span><span id="schedule_count">1</span>
-        <div class="schedule_box">
+        <div class="schedule_box"onclick="toggleDetails(this)">
             <div class="schbox_top">
               <div class="sch_time">
                   <div id="sch_start_date">1월3일 10:00</div><span>~</span><div id="sch_end_date">1월3일 11:00</div>
               </div>
-              <img src="/resources/images/editIcon 1.png" alt="editIcon" class="editbtn">
-              <img src="/resources/images/trash 1.png" alt="editIcon" class="deletebtn">
-          </div>
+              <div class="sch_btns">
+                <img src="/resources/images/editIcon 1.png" alt="editIcon" class="editbtn">
+                <img src="/resources/images/trash 1.png" alt="editIcon" class="deletebtn">
+              </div>
+            </div>
+            <div id="sch_title">외부미팅</div>
+            <div class="schbox_mid">
+              <div class="cal_name">
+                캘린더 : <span class="cal_dot" style=" background-color: blue"></span><span id="cal_name">외부일정</span>
+              </div>
+              <div class="location">
+                장소 &nbsp;&nbsp;&nbsp;: <span id="location">서울시 강남구 무슨동 협력사 사무실</span>
+              </div>
+              <div class="att_list">
+                참석자 : <span id="att_list">박보검</span>
+              </div>
+              <div class="sch_datail">
+                내용 : 
+                <br>
+                <p id="sch_datail">
+                협력사 B와의 새로운 프로젝트에 대한 기획 및 협의.
+                <br>
+                우리 회사 담당자: 김매니저, 이팀장 
+                <br>
+                협력사 B 담당자: 박팀장, 최개발자
+                <br>
+                기술적인 요구사항 및 일정 조율.</p>
+              </div>
+            </div>
         </div>
+
+
 
 
       </div>
@@ -130,70 +158,86 @@
         });
       });
 
+      function toggleDetails(scheduleBox) {
+    const midSection = scheduleBox.querySelector('.schbox_mid');
+    const botSection = scheduleBox.querySelector('.schbox_bot');
+
+    // 토글: 중간과 끝 부분을 숨기거나 보이게 함
+    midSection.style.display = midSection.style.display === 'none' ? 'block' : 'none';
+    botSection.style.display = botSection.style.display === 'none' ? 'block' : 'none';
+    
+  }
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialDate: '2023-01-12',
+    initialDate: '2024-01-12',
     editable: true,
     selectable: true,
     businessHours: true,
     dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
-        title: 'All Day Event',
-        start: '2023-01-01'
+        title: '종일일정',
+        color:'orange',
+        start: '2024-01-01'
       },
       {
-        title: 'Long Event',
-        start: '2023-01-07',
-        end: '2023-01-10'
-      },
-      {
-        groupId: 999,
-        title: 'Repeating Event',
-        start: '2023-01-09T16:00:00'
+        title: '정산일',
+        color:'green',
+        start: '2024-01-07',
+        end: '2024-01-10'
       },
       {
         groupId: 999,
-        title: 'Repeating Event',
-        start: '2023-01-16T16:00:00'
+        title: '회의',
+        start: '2024-01-09T16:00:00'
       },
       {
-        title: 'Conference',
-        start: '2023-01-11',
-        end: '2023-01-13'
+        groupId: 999,
+        title: '회의',
+        start: '2024-01-16T16:00:00'
       },
       {
-        title: 'Meeting',
-        start: '2023-01-12T10:30:00',
-        end: '2023-01-12T12:30:00'
+        title: '장재영',
+        color:'orange',
+        start: '2024-01-11',
+        end: '2024-01-13'
+      },
+      {
+        title: '교육',
+        color:'green',
+        start: '2024-01-12T10:30:00',
+        end: '2024-01-12T12:30:00'
       },
       {
         title: 'Lunch',
-        start: '2023-01-12T12:00:00'
+        start: '2024-01-12T12:00:00'
       },
       {
         title: 'Meeting',
-        start: '2023-01-12T14:30:00'
+        start: '2024-01-12T14:30:00'
       },
       {
         title: 'Happy Hour',
-        start: '2023-01-12T17:30:00'
+        start: '2024-01-12T17:30:00'
       },
       {
         title: 'Dinner',
-        start: '2023-01-12T20:00:00'
+        start: '2024-01-12T20:00:00'
       },
       {
-        title: 'Birthday Party',
-        start: '2023-01-13T07:00:00'
+        title: '자유시간',
+        color:'blue',
+        start: '2024-01-13T07:00:00'
+        
       },
       {
         title: 'Click for Google',
         url: 'http://google.com/',
-        start: '2023-01-28'
+        start: '2024-01-28'
       }
     ]
   });

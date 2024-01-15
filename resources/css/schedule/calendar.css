@@ -133,7 +133,6 @@ main{
   color: #415CBE;
 }
 
-
 #fc-dom-1{
   color: #42414a;
 }
@@ -155,6 +154,8 @@ main{
   border: solid 1px #E9EAEC;
   margin: 10px;
   padding: 10px;
+  max-height: 700px; /* 원하는 높이로 설정하세요. */
+  overflow-y: auto;
 
 }
 
@@ -187,15 +188,106 @@ main{
   border-radius: 6px;
   padding: 10px;
   margin-top: 5px;
+  cursor: pointer;
+
+  
 }
 .schbox_top{
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+}
+/* 
+
+.schbox_mid{
+
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.25;
+
+}
+.schbox_mid span{
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+#sch_title{
+  font-size: 16px;
+  margin: 10px;
+
+}
+.cal_dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  display: inline-block;
+  margin-left: 5px;
+
+}
+.cal_name,.location,.att_list,.sch_datail{
+  margin: 10px;
+  font-size: 15px;
+}
+#cal_name,#location,#att_list,#sch_datail{
+  font-size: 14px;
+}
+#sch_datail{
+  margin-left: 60px;
+  padding: 5px;
+
+} */
+
+.schbox_mid,
+.schbox_bot {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.25;
   
 }
 
+.schbox_mid span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-right: 5px;
+}
 
+#sch_title {
+  font-size: 16px;
+  margin: 10px;
+}
 
+.cal_dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
 
+.cal_name,
+.location,
+.att_list,
+.sch_datail {
+  margin: 10px;
+  font-size: 15px;
+}
 
+#cal_name,
+#location,
+#att_list,
+#sch_datail {
+  font-size: 14px;
+}
 
+#sch_datail {
+  margin-left: 60px;
+  padding: 5px;
+}
