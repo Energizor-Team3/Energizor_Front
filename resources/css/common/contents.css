@@ -115,7 +115,7 @@ table thead th , table tbody tr td{
     
 }
 table tbody tr td:first-child{
-    max-width: 30px;
+    max-width: 73px;
     min-width: 30px;
 }
 
