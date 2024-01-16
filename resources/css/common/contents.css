@@ -7,7 +7,6 @@ main{
     padding: 50px 0;
     margin: 0 10px;
     font-family: 'Noto Sans KR', sans-serif;
-
 }
 
 .content{
@@ -51,6 +50,11 @@ main{
     width: 500px;
     border-radius: 6px;
     text-indent: 15px;;
+
+}
+
+.content input[type="search"]::focus{
+    border: 1px solid rgb(114, 114, 114);
 }
 
 .subject .search_box::after{
@@ -139,16 +143,6 @@ table tbody tr{
     border-bottom: 1px solid rgb(156, 156, 156);
 }
 
-#page_number_choice{
-    margin-top: 20px;
-    padding: 3px;
-    border-radius: 3px;
-}
-
-.page_number_choice_text {
-    font-size: 14px;
-
-}
 
 
 

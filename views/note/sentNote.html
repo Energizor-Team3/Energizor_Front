@@ -9,6 +9,7 @@
   <script src="/resources/js/common/contents.js"></script>
   <link rel="stylesheet" href="/resources/css/common/header.css">
   <link rel="stylesheet" href="/resources/css/common/contents.css">
+  <link rel="stylesheet" href="/resources/css/message.css">
 </head>
 <body>
 
@@ -55,21 +56,40 @@
       <article>
         <h2>쪽지</h2>
         <div>
-          <a href="#" class="btn">쪽지쓰기</a>
+          <a href="writingNote.html" class="btn">쪽지쓰기</a>
         </div>
         <ul class="sub_list">
           <li>
             <div>
               <img src="/resources/images/Inbox.png" alt="">
-              <span>받은쪽지함</span>
+              <a href="receiveNote.html">받은쪽지함</a>
             </div>
+            <span>5</span>
           </li>
           <li class="sub_list_text">
             <div>
               <img src="/resources/images/Outbox.png" alt="">
-              <span>보낸쪽지함</span>
+              <a href="sentNote.html">보낸쪽지함</a>
             </div>
-            <button>수신확인</button>
+            <a href="checkNote.html">수신확인</a>
+          </li>
+          <li>
+            <div>
+              <img src="/resources/images/note.png" alt="">
+              <a href="receiveNoteStorage.html">쪽지보관함</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="/resources/images/temporary.png" alt="">
+              <a href="sentNoteStorage.html">임시보관함</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="/resources/images/Trash.png" alt="">
+              <a href="noteTrash.html">휴지통</a>
+            </div>
           </li>
         </ul>
       </article>
@@ -78,7 +98,7 @@
     <main>
       <div class="content">
           <div class="subject">
-            <strong>받은 쪽지함</strong>
+            <strong>보낸 쪽지함</strong>
             <div class="line">
               <div class="search_box">
                   <input type="search"  placeholder="보낸사람, 제목을 입력하세요." >
@@ -87,11 +107,11 @@
           </div>
 
           <div class="select_line">
-            <select name="messageLead">
+            <!-- <select name="messageLead">
                 <option value="전체">전체</option>
                 <option value="읽음">읽음</option>
                 <option value="안읽음">안읽음</option>
-            </select>
+            </select> -->
             <!-- <div class="attention_Text">
               <img src="/resources/images/Exclamation.png" alt="">
               <span>보관하지 않은 쪽지는 3개월 후 자동 삭제됩니다</span>
@@ -101,10 +121,9 @@
           <table>
               <thead>
                     <th><input type="checkbox"></th>
-                    <th>보낸사람</th>
+                    <th>받는사람</th>
                     <th>제목</th>
-                    <th>받은날짜</th>
-                    <th>읽은날짜</th>
+                    <th>보낸날짜</th>
               </thead>
               <tbody>
                 <tr>

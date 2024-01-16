@@ -23,13 +23,13 @@ li{
 
 header{
   padding: 5px;
-  height: 100vh;
   border-radius: 5px;
   background-color: #FFFFFF;
   font-family: 'Noto Sans KR', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
+  height: 100vh;
 }
 
 header h1{
@@ -47,8 +47,8 @@ h1 span{
 
 header h1 img{
   width: 80px;
-
 }
+
 
 #main_list_icon div{
   margin-bottom: 10px;
@@ -93,18 +93,15 @@ header h1 img{
 /* 서브헤더============================ */
 
 section{
-  background-color: rgb(196, 196, 196);
   margin-left: 85px;
-  height: 100vh;
-  background-color: tomato;
   flex-basis: 280px;
+  background-color: #F2F6FF;
+  height: 100vh;
 }
 
 article{
   padding: 100px 30px;
   width: 280px;
-  background-color: #F2F6FF;
-  height: 100vh;
 }
 
 article h2{
@@ -116,10 +113,19 @@ article .btn{
   font-size: 20px;
   padding: 15px 70px;
   background-color: #415CBE;
+
   border-radius: 6px;
   color: white;
   width: 230px;
   cursor: pointer;
+  border: transparent;
+  display: inline-block;
+}
+
+article .btn:hover{
+  background-color: #4f69c9;
+
+
 }
 
 article .sub_list{
@@ -133,7 +139,7 @@ article .sub_list li{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 article .sub_list li div{
@@ -144,19 +150,35 @@ article .sub_list li div{
 
 article .sub_list li div img{
   padding-right: 10px;
-  width: 30px;
-  height: 24px;
+  width: 32px;
+  height: 25px;
 }
 
-article .sub_list .sub_list_text button{
-  font-size: 14px;
+article .sub_list .sub_list_text > a{
+  font-size: 12px;
   cursor: pointer;
   border: 1px solid rgb(128, 128, 128);
   background-color: transparent;
   border-radius: 6px;
   padding: 2px;
-
 }
 
+
+article .sub_list .sub_list_text > a:hover {
+  background-color: #94A9FF;
+  border: 1px solid #94A9FF;
+}
+
+#page_number_choice{
+  margin-top: 20px;
+  padding: 3px;
+  border-radius: 3px;
+  width: 80px;
+}
+
+.page_number_choice_text {
+  font-size: 14px;
+
+}
 
 
