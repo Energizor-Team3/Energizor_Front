@@ -36,59 +36,7 @@ body {
 #calendar {
     width: 100%;
     margin-top: 20px;
+    max-height: 300px;
 }
 
-/* FullCalendar 스타일 수정 */
-.fc-unthemed .fc-today {
-    background: #415CBE;
-    color: #fff;
-}
-
-.fc-content {
-    color: #333;
-}
-
-.fc-event {
-    background-color: #415CBE;
-    color: #fff;
-}
-
-.fc-title {
-    font-size: 14px;
-}
-
-.fc-axis {
-    color: #333;
-}
-
-.fc-widget-header {
-    background-color: #415CBE;
-    color: #fff;
-}
-
-.fc-center h2 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.fc-center button {
-    margin-right: 10px;
-    font-size: 14px;
-    background-color: #415CBE;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 5px 10px;
-}
-
-.fc-center button:hover {
-    background-color: #314b94;
-}
-
-/* FullCalendar 시간 레이블 스타일 수정 */
-.fc-time-grid .fc-slats td,
-.fc-time-grid .fc-axis {
-    height: 40px; /* 시간 레이블의 높이를 조절합니다. */
-    font-size: 14px; /* 시간 레이블의 폰트 크기를 조절합니다. */
-}
+ 
