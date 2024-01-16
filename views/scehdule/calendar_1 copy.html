@@ -148,7 +148,7 @@
             </div>
             <div class="sch_btns">
               <img src="/resources/images/editIcon 1.png" alt="editIcon" class="editbtn" >
-              <img src="/resources/images/trash 1.png" alt="editIcon" class="deletebtn" >
+              <img src="/resources/images/trash 1.png" alt="editIcon" class="deletebtn" onclick="showConfirmationPopup()">
             </div>
           </div>
           <div id="sch_title">중요미팅</div>
@@ -176,13 +176,13 @@
             </div>
           </div>
       </div>
-      <div class="popup">
+      <div class="delete_popup">
         <p>삭제하시겠습니까?</p>
         <button onclick="deleteSchedule()">확인</button>
         <button onclick="hideConfirmationPopup()">취소</button>
       </div>
     
-      <div class="overlay" onclick="hideConfirmationPopup()"></div>
+      <div class="dpop_overlay" onclick="hideConfirmationPopup()"></div>
 
 
 
@@ -197,13 +197,13 @@
       }
   
       function showConfirmationPopup() {
-        document.querySelector('.popup').style.display = 'block';
-        document.querySelector('.overlay').style.display = 'block';
+        document.querySelector('.delete_popup').style.display = 'block';
+        document.querySelector('.dpop_overlay').style.display = 'block';
       }
   
       function hideConfirmationPopup() {
-        document.querySelector('.popup').style.display = 'none';
-        document.querySelector('.overlay').style.display = 'none';
+        document.querySelector('.delete_popup').style.display = 'none';
+        document.querySelector('.dpop_overlay').style.display = 'none';
       }
     </script>
   
@@ -305,5 +305,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var allcalCheckbox = document.getElementById("allcal_checkbox");
+        var checkboxes = document.querySelectorAll(".cal_nav input[type='checkbox']");
+    
+        allcalCheckbox.addEventListener("change", function () {
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = allcalCheckbox.checked;
+          });
+        });
+    
+        checkboxes.forEach(function (checkbox) {
+          checkbox.addEventListener("change", function () {
+            // 전체일정 체크박스의 체크 여부 업데이트
+            allcalCheckbox.checked = areAllCheckboxesChecked();
+          });
+        });
+    
+        function areAllCheckboxesChecked() {
+          var allChecked = true;
+          checkboxes.forEach(function (checkbox) {
+            if (!checkbox.checked) {
+              allChecked = false;
+            }
+          });
+          return allChecked;
+        }
+      });
+    </script>
+    
 </body>
 </html>
