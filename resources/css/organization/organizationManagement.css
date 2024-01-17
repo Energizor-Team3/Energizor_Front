@@ -1,0 +1,18 @@
+
+
+
+.group_btn_list{
+}
+
+.group_btn_list a {
+  display: inline-block;
+  border: 1px solid rgb(128, 128, 128);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 200ms;
+}
+
+.group_btn_list a:hover{
+  border: 1px solid #94A9FF;
+  background-color: #94A9FF;
+}

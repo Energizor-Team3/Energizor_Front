@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/resources/css/common/header.css">
+<link rel="stylesheet" href="/resources/css/common/contents.css">
+<link rel="stylesheet" href="/resources/css/organization/organization.css">
+<script src="/resources/js/common/header.js"></script>
+<script src="/resources/js/common/contents.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/jstree.min.js"></script>
+
+</head>
+<body>
+
+<div id="wrap">
+    <header>
+    <h1><img src="/resources/images/Logo.png" alt=""></h1>
+    <nav>
+        <div id="main_list_icon">
+        <div>
+            <a href="#" ><img src="/resources/images/Home.png" alt=""></a><span>홈</span>
+        </div>
+        <div>
+            <a href="#" ><img src="/resources/images/Approval.png" alt=""></a><span>전자결재</span>
+        </div>
+        <div>
+            <a href="#" ><img src="/resources/images/Attendance.png" alt=""></a><span>근태관리</span>
+        </div>
+        <div>
+            <a href="#" ><img src="/resources/images/calendar.png" alt=""></a><span>일정관리</span>
+        </div>
+        <div>
+            <a href="#" ><img src="/resources/images/Address.png" alt=""></a><span>주소록</span>
+        </div>
+        <div>
+            <a href="/views/organization/organization.html" ><img src="/resources/images/Organization.png" alt=""></a><span>조직도</span>
+        </div>
+        <div>
+            <a href="/views/note/receiveNote.html" ><img src="/resources/images/Mail.png" alt=""></a><span>쪽지</span>
+        </div>
+        <div>
+            <a href="#" ><img src="/resources/images/Messanger.png" alt=""></a><span>메신저</span>
+        </div>
+        <div>
+            <a href="#"><img src="/resources/images/reservation.png" alt=""></a><span>자원예약</span>
+        </div>
+        <div>
+            <a href="#"><img src="/resources/images/board.png" alt=""></a><span>게시판</span>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+    <section>
+    <article>
+        <h2>조직도</h2>
+        <div>
+        <a href="writingNote.html" class="btn">새그룹</a>
+        </div>
+        <ul class="sub_list">
+        <li>
+            <div>
+            <img src="/resources/images/organization.png" alt="">
+            <a href="/views/organization/organization.html">조직도</a>
+            </div>
+        </li>
+        <li class="sub_list_text">
+            <div>
+            <img src="/resources/images/file2.png" alt="">
+            <a href="/views/organization/organizationManagement.html">그룹관리</a>
+            </div>
+        </li>
+        </ul>
+    </article>
+    </section>
+
+    <main>
+        <div class="content">
+            <div class="subject">
+                <strong>조직도</strong>
+                <div class="line">
+                <div class="search_box">
+                    <input type="search"  placeholder="보낸사람, 제목을 입력하세요." >
+                </div>
+                </div>
+            </div>
+
+            <div class="group_wrap">
+                <div class="group" >
+                    <!-- <div class="group">&lt;조직&gt;</div> -->
+                    
+                    <div class="group_content">
+                        <!-- 조직도 내용 -->
+                        <div class="group_list">
+                            <div class="group_search">
+                                <input type="search" id="group_search" placeholder="부서명 , 직원명을 입력하세요">
+                                <!-- <button id="search_button">검색</button> -->
+                                <label for="group_search"><img src="/resources/images/search.png" alt=""></label>
+                            </div>
+                            <div>
+                                <div id="org_chart">
+                                <!-- 조직도 트리뷰 들어갈 자리 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group_info_wrap">
+                    <div class="group_member_info_wrap">
+                        <a class="note_btn" href="#">쪽지</a>
+                        <hr>
+                        <div class="group_info">
+                            <ul class="group_member_info">
+                                <li>
+                                    <strong>사용자 ID</strong>
+                                    <span>45454</span>
+                                </li>
+                                <li>
+                                    <strong>이름</strong>
+                                    <span>홍길동</span>
+                                </li>
+                                <li>
+                                    <strong>소속 부서</strong>
+                                    <span>개발 1팀</span>
+                                </li>
+                                <li>
+                                    <strong>직급</strong>
+                                    <span>대리</span>
+                                </li>
+                                <li>
+                                    <strong>휴대폰 번호</strong>
+                                    <span>010-1234-4567</span>
+                                </li>
+                                <li>
+                                    <strong>이메일</strong>
+                                    <span></span>
+                                </li>
+                            </ul>
+                            <img src="/resources/images/personSample.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="group_department_info_wrap">
+                        <ul class="group_department_info">
+                            <li>
+                                <strong>그룹명</strong>
+                                <span>개발1팀</span>
+                            </li>
+                            <li class="department_member">
+                                <strong>소속 직원</strong>
+                                <div>
+                                    <img src="/resources/images/person.png" alt="">
+                                    <span>홍길동1</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    const orgData = [
+        { "id": "EveryWare", "parent": "#", "text": "EveryWare", "state": { "opened": true } },
+
+        { "id": "관리본부", "parent": "EveryWare", "text": "관리본부" },
+        { "id": "원빈", "parent": "관리본부", "text": "원빈 관리본부장" },
+        { "id": "총무팀", "parent": "관리본부", "text": "총무팀" },
+        { "id": "박서준", "parent": "총무팀", "text": "박서준팀장" },
+        { "id": "회계팀", "parent": "관리본부", "text": "회계팀" },
+        { "id": "강동원", "parent": "회계팀", "text": "강동원팀장" },
+
+        { "id": "영업본부", "parent": "EveryWare", "text": "영업본부" },
+        { "id": "헨리", "parent": "영업본부", "text": "헨리영업본부장" },
+
+        { "id": "개발본부", "parent": "EveryWare", "text": "개발본부"},
+        { "id": "IT운영팀", "parent": "개발본부", "text": "IT운영팀"},
+        { "id": "차은우", "parent": "IT운영팀", "text": "차은우팀장" },
+        { "id": "개발팀", "parent": "개발본부", "text": "개발팀" },
+        { "id": "유승제", "parent": "개발팀", "text": "유승제팀장" },
+        { "id": "우지선", "parent": "개발팀", "text": "우지선" },
+        { "id": "박다희", "parent": "개발팀", "text": "박다희" },
+        { "id": "김수연", "parent": "개발팀", "text": "김수연" },
+        { "id": "김다혜", "parent": "개발팀", "text": "김다혜" },
+        { "id": "축온청", "parent": "개발팀", "text": "축온청" },
+        { "id": "장재영", "parent": "개발팀", "text": "장재영" },
+        { "id": "이준희", "parent": "개발팀", "text": "이준희" },
+
+        { "id": "마케팅본부", "parent": "EveryWare", "text": "마케팅본부" },
+        { "id": "지창욱", "parent": "마케팅본부", "text": "지창욱 마케팅본부장" }
+    ];
+
+    // jsTree 초기화
+    $('#org_chart').jstree({
+        'core': {
+            'data': orgData,
+        }
+    }).on('ready.jstree', function() {
+        // "개발본부" 노드를 초기에 열린 상태로 설정
+        $('#org_chart').jstree('open_node', '개발본부');
+        $('#org_chart').jstree('open_node', '개발팀');
+    });
+
+
+
+    // 조직도 클릭시 ul화면 동적생성코드
+
+    $('#org_chart').on('select_node.jstree', function (e, data) {
+    var selectedNodeText = data.node.text;
+
+    $('.group_member_info_wrap').hide();
+    $('.group_department_info_wrap').hide();
+
+    // 선택한 노드 text를 확인하고 해당하는 요소의 표시/숨김 조절
+    if (selectedNodeText === '관리본부' ||
+        selectedNodeText === '총무팀' ||
+        selectedNodeText === '회계팀' ||
+        selectedNodeText === '영업본부' ||
+        selectedNodeText === '개발본부' ||
+        selectedNodeText === 'IT운영팀' ||
+        selectedNodeText === '개발팀' ||
+        selectedNodeText === '마케팅본부') {
+        $('.group_member_info_wrap').hide();
+        $('.group_department_info_wrap').show();
+    } else {
+
+        $('.group_member_info_wrap').show();
+        $('.group_department_info_wrap').hide();
+    }
+});
+
+$(document).ready(function () {
+
+    $('.group_member_info_wrap').hide();
+    $('.group_department_info_wrap').hide();
+});
+
+    </script>
+
+</body>
+</html>
