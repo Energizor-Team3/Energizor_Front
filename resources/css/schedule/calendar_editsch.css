@@ -179,7 +179,7 @@ main{
   margin-top:10px;
 }
 
-#find_map,#add_att{
+#find_map,.add_att{
   width: 50px;
   height: 30px;
   border-radius: 6px;
@@ -206,7 +206,7 @@ main{
   height: 415px;
 }
 
-#add_att{
+.add_att{
   font-size: 25px;
 } 
 .sub_btn,.cancle_btn {
@@ -233,4 +233,3 @@ main{
   display: flex;
   margin: auto;
 }
- 
