@@ -1,0 +1,88 @@
+
+
+
+main .button_list{
+  border-bottom: 1px solid black;
+  padding: 30px 0;
+  
+}
+
+main .button_list button{
+  border: 1px solid rgb(119, 119, 119);
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+main .button_list button:hover {
+  background-color: #94A9FF;
+  border: 1px solid #94A9FF;
+}
+
+main .form_wrap {
+  padding: 14px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .form_wrap label{
+  width: 200px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+main .form_wrap span{
+  width: 200px;
+  display: inline-block;
+}
+
+main .form_wrap div:nth-child(3) label{
+  margin-bottom: 0;
+}
+
+main .form_wrap div input{
+  height: 24px;
+  width: 600px;
+}
+
+main .form_wrap div span {
+  margin-bottom: 10px;
+}
+
+main .form_wrap div:nth-child(3){
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+main .form_wrap input[type="file"] {
+  display: none;
+}
+
+main .form_wrap div label img{
+  width: 20px;
+}
+
+.form_wrap #fileList {
+  margin-left: 200px;
+  width: 600px;
+  height: 70px;
+  border: 1px solid rgb(145, 145, 145);
+  margin-bottom: 20px;
+  overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
