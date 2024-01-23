@@ -25,6 +25,27 @@ main .form_wrap {
   padding: 14px 30px;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
+}
+
+main .form_wrap div{
+  display: flex;
+}
+
+main .form_wrap div button{
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid rgb(117, 117, 117);
+  margin: 0 8px;
+  font-size: 16px;
+  transition: 200ms;
+}
+
+main .form_wrap div button:hover{
+  background-color: #94A9FF;
+  border: 1px solid #94A9FF;
 }
 
 main .form_wrap label{
@@ -33,9 +54,13 @@ main .form_wrap label{
   margin-bottom: 20px;
 }
 
-main .form_wrap span{
-  width: 200px;
-  display: inline-block;
+main .form_wrap div:nth-child(2) input{
+  margin-left: 13px;
+}
+
+main .form_wrap .file_txt{
+  display: flex;
+  flex-direction: column;
 }
 
 main .form_wrap div:nth-child(3) label{
@@ -43,12 +68,12 @@ main .form_wrap div:nth-child(3) label{
 }
 
 main .form_wrap div input{
-  height: 24px;
-  width: 600px;
+  height: 30px;
+  width: 100%;
 }
 
-main .form_wrap div span {
-  margin-bottom: 10px;
+main .form_wrap span{
+  font-weight: bold;
 }
 
 main .form_wrap div:nth-child(3){
@@ -62,11 +87,14 @@ main .form_wrap input[type="file"] {
 
 main .form_wrap div label img{
   width: 20px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .form_wrap #fileList {
-  margin-left: 200px;
-  width: 600px;
+  margin-left: 175px;
+  width: 1165px;
   height: 70px;
   border: 1px solid rgb(145, 145, 145);
   margin-bottom: 20px;

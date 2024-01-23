@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-a, a:visited , a:link{
+a, a:visited , a:link , a:hover{
   text-decoration: none;
   color: inherit;
 }
@@ -113,19 +113,18 @@ article .btn{
   font-size: 20px;
   padding: 15px 70px;
   background-color: #415CBE;
-
   border-radius: 6px;
   color: white;
   width: 230px;
   cursor: pointer;
   border: transparent;
   display: inline-block;
+  text-align: center;
 }
 
 article .btn:hover{
   background-color: #4f69c9;
-
-
+  color: white;
 }
 
 article .sub_list{

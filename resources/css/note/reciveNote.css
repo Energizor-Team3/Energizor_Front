@@ -1,0 +1,22 @@
+
+
+
+main .button_list{
+  margin: 0 16px;  
+}
+
+main .button_list button{
+  border: 1px solid rgb(119, 119, 119);
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+main .button_list button:hover {
+  background-color: #94A9FF;
+  border: 1px solid #94A9FF;
+}
+
+

@@ -1,8 +1,7 @@
 
 
 
-.group_btn_list{
-}
+
 
 .group_btn_list a {
   display: inline-block;
@@ -15,4 +14,25 @@
 .group_btn_list a:hover{
   border: 1px solid #94A9FF;
   background-color: #94A9FF;
+}
+
+
+.group_department_info_wrap button{
+  padding: 4px 20px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid rgb(68, 68, 68);
+  transition: 200ms;
+
+}
+
+.group_department_info_wrap button:hover {
+  background-color: #94A9FF;
+  border: 1px solid #94A9FF;
+}
+
+.group_department_info li:last-child {
+  text-align: center;
 }

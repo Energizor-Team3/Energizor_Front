@@ -77,7 +77,6 @@ main .group_list label{
 
 /* 조직도 부서 정보 */
 
-.group_department_info_wrap{}
 
 .group_department_info {
   margin-top: 40px;
@@ -111,7 +110,7 @@ main .group_list label{
 .department_member div{
   border: 1px solid rgb(95, 95, 95);
   width: 380px;
-  height: 480px;
+  height: 380px;
   margin-left: 5px;
   padding: 10px;
 }
