@@ -107,32 +107,66 @@
       <h2> 캘린더 설정 </h2>
       <div class="addbox">
         <table class="input_tb">
+          <tr>
+            <td></td>
+            <td class="add_btntd"><button type="button" class="add_btn" onclick="toggleCalendar()">생성</button></td>
+          </tr>
           <tr class="tr_1">
             <td>캘린더 목록</td>
             <td class="cal_list">
+              <div class="cal_listdiv">
+                <span class="cal-header">개인 캘린더</span>
                 <ul>
-                  <li>캘린더1</li>
-                  <li>캘린더2</li>
-                  <li>캘린더3</li>
-                  <li>캘린더4</li>
-
+                    <li>캘린더 1</li>
+                    <li>캘린더 2</li>
+                    <li>캘린더 3</li>
+                    <li>캘린더 4</li>
 
                 </ul>
-            </td>
-          </tr>
-          <tr class="tr_2">
-            <td>캘린더 추가</td>
-            <td>
-              <div>
-                  <label for="colors">색상: <input type="color" class="colors"></label>
-                  <label for="cal_title">캘린더명<input type="text"></label>
-                  <label>캘린더 유형<select><option>개인 캘린더</option><option>공유 캘린더</option></select></label>
+                <span class="cal-header">공유 캘린더</span>
+                <ul class="shared-cal-list">
+                    <li>캘린더 5</li>
+                    <li>캘린더 6</li>
+                    <!-- Add more shared calendars as needed -->
+                </ul>
               </div>
             </td>
           </tr>
+          <tr class="tr_2 hidden" id="calendarAddRow">
+            <td>캘린더 추가</td>
+            <td class="add_cal_td">
+              <table class="">
+                  <!-- 테이블 내용 추가 -->
+                  <tr>
+                      <td><label for="colors">색상:</label> </td>
+                      <td><input type="color" id="colors"></td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="cal_title">캘린더명</label>
+                      </td>
+                      <td>
+                        <input type="text" id="cal_title"><button>추가</button>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label>캘린더 유형</label>
+                      </td>
+                      <td>
+                        <select class="cal_select">
+                          <option>개인 캘린더</option>
+                          <option>공유 캘린더</option>
+                      </select>
+                      </td>
+                  </tr>
+
+              </table>
+          </td>
+          </tr>
           
           <!-- datebox -->
-          <tr class="tr_3">
+          <tr class="tr_3 hidden" id="dateboxRow">
             <td>캘린더 공유하기</td>
             <td><span class="attlist">김땡땡</span>
                 <button class="add_att">+</button>
@@ -181,6 +215,27 @@
         }
       });
     </script>
+  <script>
+    function toggleCalendar() {
+      // Toggle the visibility of the "캘린더 추가" and "캘린더 공유하기" rows
+      var calendarAddRow = document.getElementById('calendarAddRow');
+      var dateboxRow = document.getElementById('dateboxRow');
+
+      // Toggle the visibility by changing the display property
+      if (calendarAddRow.style.display === 'none' || calendarAddRow.style.display === '') {
+        calendarAddRow.style.display = 'table-row';
+        dateboxRow.style.display = 'table-row';
+      } else {
+        calendarAddRow.style.display = 'none';
+        dateboxRow.style.display = 'none';
+      }
+    }
+
+    function addCalendar() {
+      // You can add logic to handle the "추가" button click if needed
+      alert('캘린더가 추가되었습니다.');
+    }
+  </script>
     
 </body>
 </html>
