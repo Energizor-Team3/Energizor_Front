@@ -101,6 +101,7 @@ main{
 /* ===============일정 추가 css=================  */
 
 .add_detail_box{
+  position: relative;
   border: 1px solid rgb(247, 247, 247);
   background-color: white;
   width: 1400px;
@@ -205,6 +206,12 @@ main{
   width: 270px;
   height: 415px;
 }
+.add_detail_box .chartbox {
+  position: absolute;
+  right: 30px;
+  top:350px;
+ 
+}
 
 #add_att{
   font-size: 25px;
@@ -225,7 +232,7 @@ main{
 }
 .chartbox{
   width: fit-content;
-  margin-top:210px;
+  display: none;
 
 }
 

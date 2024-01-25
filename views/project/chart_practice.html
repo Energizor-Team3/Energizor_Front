@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resources/css/project/chart_project.css">
+ 
+</head>
+<body>
+ 
+    <div class="progress-bar2"></div>
+    <div class="progress-bar3"></div>
+    <div class="donut-container">
+        <div class="donut"> </div>
+    </div>
+ 
+</body>
+</html>
+<script>
+ 
+const bar3 = document.querySelector(".progress-bar3")  // 여러 색 민원바
+const donut2 = document.getElementsByClassName("donut")[0]
+
+let totalMinwon = 72, resolveMinwon = 12
+ 
+
+ 
+
+let t3 = 0
+const barAnimation3 = setInterval(() => {
+  bar3.style.background = totalMinwon > t3 ? `linear-gradient(to right, #4F98FF 0 ${t3}%, #dedede ${t3}% 100% )` : 
+  totalMinwon + resolveMinwon > t3 ? `linear-gradient(to right, #4F98FF 0 ${totalMinwon}%, #f44336 ${totalMinwon}% ${t3}%, #dedede ${t3}% 100%)` : 
+  `linear-gradient(to right, #4F98FF 0 ${totalMinwon}%, #f44336 ${totalMinwon}% ${totalMinwon + resolveMinwon}%, #dedede ${totalMinwon + resolveMinwon}% 100%)`
+  t3++ >= totalMinwon + resolveMinwon && clearInterval(barAnimation3)
+}, 10)
+
+ 
+
+let t5 = 0
+const donutAnimation2 = setInterval(() => {
+  donut2.dataset.percent = t5
+  donut2.style.background = totalMinwon > t5 ? `conic-gradient(#4F98FF 0 ${t3}%, #dedede ${t3}% 100% )` : 
+  totalMinwon + resolveMinwon > t5 ? `conic-gradient(#4F98FF 0 ${totalMinwon}%, #f44336 ${totalMinwon}% ${t3}%, #dedede ${t3}% 100%)` : 
+  `conic-gradient(#4F98FF 0 ${totalMinwon}%, #f44336 ${totalMinwon}% ${totalMinwon + resolveMinwon}%, #dedede ${totalMinwon + resolveMinwon}% 100%)`
+  t5++ >= totalMinwon + resolveMinwon && clearInterval(donutAnimation2)
+}, 10)
+
+const repeat = setInterval(() => {
+ donutAnimation2()
+})
+</script>

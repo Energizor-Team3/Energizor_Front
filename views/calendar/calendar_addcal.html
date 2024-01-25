@@ -9,7 +9,7 @@
   <script src="/resources/js/common/contents.js"></script>
   <script src="/resources/js/calendar/index.global.js"></script>
   <link rel="stylesheet" href="/resources/css/common/header.css">
-  <link rel="stylesheet" href="/resources/css/schedule/calendar_editsch.css">
+  <link rel="stylesheet" href="/resources/css/calendar/calendar_addcal.css">
 </head>
 <body>
 
@@ -104,51 +104,70 @@
     <main>
 
     <div class="add_detail_box">
-      <h2> 일정 수정 </h2>
+      <h2> 캘린더 설정 </h2>
       <div class="addbox">
         <table class="input_tb">
-          <tr>
-            <td>일정명</td>
-            <td><input id="sch_title" value="수정전 일정이 들어감"></td>
-          </tr>
-          <tr>
-            <td>캘린더</td>
-            <td>
-              
-              <select id="sch_cal" >
-                <optgroup label="내 캘린더">
-                  <option value="개인일정"> 개인일정<span class="dot1" style=" background-color: red"></span></option>    
-                  <option value="외부일정" >외부 일정</option>   
-                </optgroup> 
-                <optgroup label="공유 캘린더">
-                  <option value="회사일정">회사 일정</option>    
-                  <option value="부서일정">부서 일정</option>
-                </optgroup>
-              </select>
-            </td>
+ 
+          <tr class="tr_1">
+            <td>캘린더 목록</td>
+            <td class="cal_list">
+              <div class="cal_listdiv">
+                <span class="cal-header">개인 캘린더</span>
+                <ul>
+                    <li><span class="dot" style=" background-color: red"></span>캘린더 1</li>
+                    <li>캘린더 2</li>
+                    <li>캘린더 3</li>
+                    <li>캘린더 4</li>
 
-            
-          </tr>
-          <tr>
-            <td>일시</td>
-            <td><div class="datebox"><input type="datetime-local" id="start_date"> ~ <input type="datetime-local" id="end_date"></div></td>
-            <td class="cb_zone"><input type="checkbox" id="allday"><label for="allday">종일</label></td>
-            
-          </tr>
-          <tr>
-            <td>장소</td>
-            <td><input value="원래 장소 info가 들어감"></td>
-            <td><button id="find_map">찾기</button></td>
-          </tr>
-          <tr>
-            <td>참석자</td>
-            <td><span class="attlist">김땡땡</span>
-                <button class="add_att">+</button>
+                </ul>
+                <span class="cal-header">공유 캘린더</span>
+                <ul class="shared-cal-list">
+                    <li>캘린더 5</li>
+                    <li>캘린더 6</li>
+                    <!-- Add more shared calendars as needed -->
+                </ul>
+              </div>
             </td>
           </tr>
-          <tr>
-            <td>내용</td>
-            <td><textarea id="sch_detail" style="resize: none;"></textarea></td>
+          <tr class="tr_2" id="calendarAddRow">
+            <td>캘린더 추가</td>
+            <td class="add_cal_td">
+              <table class="">
+ 
+                  <tr>
+                      <td><label for="colors">색상:</label> </td>
+                      <td><input type="color" id="colors"></td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="cal_title">캘린더명</label>
+                      </td>
+                      <td>
+                        <input type="text" id="cal_title"><button class="add_title">추가</button>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label>캘린더 유형</label>
+                      </td>
+                      <td>
+                        <select class="cal_select">
+                          <option>개인 캘린더</option>
+                          <option>공유 캘린더</option>
+                      </select>
+                      </td>
+                  </tr>
+
+              </table>
+          </td>
+          </tr>
+          
+          <!-- datebox -->
+          <tr class="tr_3" id="dateboxRow">
+            <td>캘린더 공유하기</td>
+            <td> 
+                <button class="add_att" onclick="toggleChartbox()">+</button>
+            </td>
           </tr>
         </table>
         <div class="chartbox"><img src="/resources/images/org_chartimg.png"></div>
@@ -193,6 +212,40 @@
         }
       });
     </script>
+<script>
+  function toggleChartbox() {
+      // chartbox 요소 가져오기
+      var chartBox = document.querySelector(".chartbox");
+  
+      // chartbox가 보이는지 확인하여 상태 변경
+      if (chartBox.style.display === "none" || chartBox.style.display === "") {
+          chartBox.style.display = "block";
+      } else {
+          chartBox.style.display = "none";
+      }
+  }
+  </script>
+  <!-- <script>
+    function toggleCalendar() {
+
+      var calendarAddRow = document.getElementById('calendarAddRow');
+      var dateboxRow = document.getElementById('dateboxRow');
+
+      // Toggle the visibility by changing the display property
+      if (calendarAddRow.style.display === 'none' || calendarAddRow.style.display === '') {
+        calendarAddRow.style.display = 'table-row';
+        dateboxRow.style.display = 'table-row';
+      } else {
+        calendarAddRow.style.display = 'none';
+        dateboxRow.style.display = 'none';
+      }
+    }
+
+    function addCalendar() {
+
+      alert('캘린더가 추가되었습니다.');
+    }
+  </script> -->
     
 </body>
 </html>

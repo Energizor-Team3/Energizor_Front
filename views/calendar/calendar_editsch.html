@@ -9,7 +9,7 @@
   <script src="/resources/js/common/contents.js"></script>
   <script src="/resources/js/calendar/index.global.js"></script>
   <link rel="stylesheet" href="/resources/css/common/header.css">
-  <link rel="stylesheet" href="/resources/css/schedule/calendar_addsch.css">
+  <link rel="stylesheet" href="/resources/css/calendar/calendar_editsch.css">
 </head>
 <body>
 
@@ -104,12 +104,12 @@
     <main>
 
     <div class="add_detail_box">
-      <h2> 일정 상세 등록 </h2>
+      <h2> 일정 수정 </h2>
       <div class="addbox">
         <table class="input_tb">
           <tr>
             <td>일정명</td>
-            <td><input id="sch_title"></td>
+            <td><input id="sch_title" value="수정전 일정이 들어감"></td>
           </tr>
           <tr>
             <td>캘린더</td>
@@ -137,12 +137,14 @@
           </tr>
           <tr>
             <td>장소</td>
-            <td><input></td>
+            <td><input value="원래 장소 info가 들어감"></td>
             <td><button id="find_map">찾기</button></td>
           </tr>
           <tr>
             <td>참석자</td>
-            <td><button id="add_att">+</button></td>
+            <td><span class="attlist">김땡땡</span>
+                <button class="add_att">+</button>
+            </td>
           </tr>
           <tr>
             <td>내용</td>
@@ -191,9 +193,6 @@
         }
       });
     </script>
-    
-
-    
     
 </body>
 </html>
