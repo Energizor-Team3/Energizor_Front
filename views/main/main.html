@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/resources/js/main/main.js"></script>
+
+    <link rel="stylesheet" href="/resources/css/main/main.css" />
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header>
+            <!-- <h1>Every<span>Ware</span></h1> -->
+            <h1><img src="/resources/images/Logo.png" alt=""></h1>
+            <nav>
+                <div id="main_list_icon">
+                    <div>
+                        <a href="#"><img src="/resources/images/Home.png" alt=""></a><span>홈</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Approval.png" alt=""></a><span>전자결재</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Attendance.png" alt=""></a><span>근태관리</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/calendar.png" alt=""></a><span>일정관리</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Address.png" alt=""></a><span>주소록</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Organization.png" alt=""></a><span>조직도</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Mail.png" alt=""></a><span>쪽지</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/Messanger.png" alt=""></a><span>메신저</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/reservation.png" alt=""></a><span>자원예약</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/board.png" alt=""></a><span>게시판</span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/resources/images/mypage/hrm.png" alt=""></a><span>인사관리</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="main_wrap">
+
+                <div class="main_profile">
+                    <div class="user_photo">
+                        <img src="/resources/images/mypage/user_photo_sample.png" alt="프로필사진">
+                    </div>
+                    <div class="main_profile_info">
+                        <p>김뫄뫄</p>
+                        <br>
+                        <h4>관리본부/인사팀</h4>
+                        <button class="go_mypage">마이페이지</button>
+                    </div>
+                </div>
+
+                <div class="main_commute">
+                    <h1>근태</h1>
+                    <div class="attendance-container">
+                        <div class="info">
+                            <p id="date-info">오늘 날짜: </p>
+                            <p id="time-info">현재 시각: </p>
+                            <p id="start-time-info">출근 시각: </p>
+                            <p id="end-time-info">퇴근 시각: </p>
+                        </div>
+                
+                        <div class="button-container">
+                            <button id="in-btn" onclick="recordTime('start')">출근</button>
+                            <button id="out-btn" onclick="recordTime('end')">퇴근</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main_note">
+                    <h1>쪽지</h1>
+                </div>
+            </div>
+
+            <div class="main_wrap">
+                <div class="main_project">
+                    <h1>프로젝트</h1>
+                </div>
+            </div>
+
+            <div class="main_wrap">
+                <div class="main_approval">
+                    <h1>결재</h1>
+                </div>
+                <div class="main_board">
+                    <h1>내 게시판</h1>
+                </div>
+                <div class="main_notice">
+                    <h1>공지사항</h1>
+                </div>
+            </div>
+
+        </main>
+
+</body>
+
+</html>

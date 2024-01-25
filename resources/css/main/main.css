@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'NanumGothic';
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header {
+    padding: 5px;
+    height: 100vh;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+}
+
+header h1 {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    height: 110px;
+    transform: translateX(-2px);
+}
+
+h1 span {
+    color: #415CBE;
+}
+
+header h1 img {
+    width: 200px;
+    margin-left: 30px;
+}
+
+#main_list_icon div {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+}
+
+#main_list_icon a {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+
+#main_list_icon img {
+    padding: 5px;
+    margin: 0 15px;
+    width: 40px;
+    height: 40px;
+}
+
+#main_list_icon span {
+    line-height: 55px;
+    font-size: 20px;
+    text-indent: 10px;
+    transition: 200ms ease;
+    position: absolute;
+    left: 80px;
+}
+
+#main_list_icon div:hover a img {
+    filter: invert(1);
+}
+
+#main_list_icon div:hover a {
+    background-color: #415CBE;
+    border-radius: 6px;
+}
+
+main {
+    background-color: #F2F6FF;
+    margin-left: 280px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+}
+
+
+.main_wrap {
+    width: 1200px; /* 초기 너비 설정 */
+}
+
+
+.main_wrap > div {
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+}
+
+.main_wrap > div > h1 {
+    color: #415CBE;
+    font-size: 24px;
+    padding: 20px 0 20px 30px;
+}
+
+.main_profile {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_profile p {
+    font-size: 28px;
+}
+
+.user_photo > img {
+    border-radius: 50%; 
+    overflow: hidden;
+    width: 120px;
+    margin-right: 60px;
+}
+
+.go_mypage {
+    background: #94A9FF;
+    border-radius: 6px; 
+    border: transparent;
+    width: 90px;
+    height: 30px;
+    font-weight: 550;
+    font-size: 12px;
+    color:#353535;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 20px 10px 0 10px;
+}
+
+.main_commute {
+    height: 400px;
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.attendance-container {
+    text-align: center;
+}
+
+.main_note {
+    height: 200px;
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.main_project {
+    height: 900px;
+}
+
+.main_approval {
+    height: 200px;
+}
+
+.main_board {
+    height: 300px;
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.main_notice {
+    height: 300px;
+    width: 450px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #94A9FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    height: 44px;
+}
+
+.button-container button:hover {
+    background-color: #415CBE;
+}
+
+#date-info
+{
+    font-weight: bold;
+    font-size: 20px; /* 원하는 크기로 조정하세요 */
+}
+
+#time-info 
+{
+    font-weight: bold;
+    font-size: 50px; /* 원하는 크기로 조정하세요 */
+}
+
+.attendance-container p {
+    margin: 25px 0; /* 모든 텍스트 요소 간격 동일하게 조정 */
+}
