@@ -112,25 +112,23 @@ main{
 
 /* ===============일정 추가 css=================  */
 
-.add_detail_box{
+.project_detail_box{
   position: relative;
   border: 1px solid rgb(247, 247, 247);
-  background-color: white;
-  width: 1400px;
-  height: 830px;
+  background-color: #F2F6FF;
+  width: 1450px;
+  height: 950px;
   margin:auto;
   padding: 30px;
   display: flex;
   flex-direction: column; /* 추가: 세로로 요소 배치 */
   justify-content: space-between; 
   border-radius: 6px;
-  box-shadow: 5px 5px 18px -8px rgba(148, 148, 148, 0.75);
+  /* box-shadow: 5px 5px 18px -8px rgba(148, 148, 148, 0.75); */
  
 
 }
-.add_detail_box h2{
-  margin:30px;
-}
+ 
  .input_tb{
     margin-left: 120px;
   
@@ -219,7 +217,7 @@ main{
   width: 270px;
   height: 415px;
 }
-.add_detail_box .chartbox {
+.project_detail_box .chartbox {
   position: absolute;
   right: 30px;
   top:350px;

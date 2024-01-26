@@ -9,7 +9,7 @@
   <script src="/resources/js/common/contents.js"></script>
   <script src="/resources/js/calendar/index.global.js"></script>
   <link rel="stylesheet" href="/resources/css/common/header.css">
-  <link rel="stylesheet" href="/resources/css/calendar/calendar_editsch.css">
+  <link rel="stylesheet" href="/resources/css/project/addproject.css">
 </head>
 <body>
 
@@ -56,46 +56,14 @@
       <article>
         <h2 class="menu_schedule">일정관리</h2>
         <div id="menu_1">
+          <a href="#"><img src="/resources/images/projectIcon.png" alt=""></a><span>프로젝트</span>
+        </div>
+        <div id="menu_2">
           <a href="#"><img src="/resources/images/calendarIcon.png" alt=""></a><span>캘린더</span>
         </div>
-        <div>
-          <button class="cal_btn">일정추가</button>
-          <button class="cal_btn">캘린더 설정</button>
-        </div>
+ 
 
-
-        <nav class="cal_nav">
-          <ul class="cal_ul">
-            <li>
-              <input type="checkbox" id="allcal_checkbox">
-              <label for="allcal_checkbox">전체일정</label>
-            </li>
-            <li class="cal_menu"><a href="#내캘린더">내 캘린더</a>
-              <ul>
-                <li>
-                  <input type="checkbox" id="cal_checkbox_1">
-                  <label for="cal_checkbox_1">개인일정<span class="dot" style=" background-color: red"></span></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="cal_checkbox_2">
-                  <label for="cal_checkbox_2">외부일정<span class="dot" style=" background-color: blue"></span></label>
-                </li>
-              </ul>
-            </li>
-            <li class="cal_menu"><a href="#내캘린더">공유 캘린더</a>
-              <ul>
-                <li>
-                  <input type="checkbox" id="companysch_cb">
-                  <label for="companysch_cb">회사일정<span class="dot_2" style=" background-color: orange"></span></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="departsch_cb">
-                  <label for="departsch_cb">부서일정<span class="dot_2" style=" background-color: green"></label>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+   
         
         
       </article>
@@ -104,47 +72,24 @@
     <main>
 
     <div class="add_detail_box">
-      <h2> 일정 수정 </h2>
+      <h2> 프로젝트 생성 </h2>
       <div class="addbox">
         <table class="input_tb">
           <tr>
-            <td>일정명</td>
-            <td><input id="sch_title" value="수정전 일정이 들어감"></td>
+            <td>프로젝트 명</td>
+            <td><input id="sch_title"></td>
           </tr>
-          <tr>
-            <td>캘린더</td>
-            <td>
-              
-              <select id="sch_cal" >
-                <optgroup label="내 캘린더">
-                  <option value="개인일정"> 개인일정<span class="dot1" style=" background-color: red"></span></option>    
-                  <option value="외부일정" >외부 일정</option>   
-                </optgroup> 
-                <optgroup label="공유 캘린더">
-                  <option value="회사일정">회사 일정</option>    
-                  <option value="부서일정">부서 일정</option>
-                </optgroup>
-              </select>
-            </td>
-
-            
-          </tr>
+  
           <tr>
             <td>일시</td>
             <td><div class="datebox"><input type="datetime-local" id="start_date"> ~ <input type="datetime-local" id="end_date"></div></td>
-            <td class="cb_zone"><input type="checkbox" id="allday"><label for="allday">종일</label></td>
+             
             
           </tr>
-          <tr>
-            <td>장소</td>
-            <td><input value="원래 장소 info가 들어감"></td>
-            <td><button id="find_map">찾기</button></td>
-          </tr>
+ 
           <tr>
             <td>참석자</td>
-            <td><span class="attlist">김땡땡</span>
-                <button class="add_att">+</button>
-            </td>
+            <td><button id="add_att" onclick="toggleChartbox()">+</button></td>
           </tr>
           <tr>
             <td>내용</td>
@@ -193,6 +138,21 @@
         }
       });
     </script>
+    <script>
+      function toggleChartbox() {
+          // chartbox 요소 가져오기
+          var chartBox = document.querySelector(".chartbox");
+      
+          // chartbox가 보이는지 확인하여 상태 변경
+          if (chartBox.style.display === "none" || chartBox.style.display === "") {
+              chartBox.style.display = "block";
+          } else {
+              chartBox.style.display = "none";
+          }
+      }
+      </script>
+
+    
     
 </body>
 </html>

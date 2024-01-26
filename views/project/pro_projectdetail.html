@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/resources/js/common/header.js"></script>
+  <script src="/resources/js/common/contents.js"></script>
+  <script src="/resources/js/calendar/index.global.js"></script>
+  <link rel="stylesheet" href="/resources/css/common/header.css">
+  <link rel="stylesheet" href="/resources/css/project/pro_projectdetail.css">
+</head>
+<body>
+
+  <div id="wrap">
+    <header>
+      <h1><img src="/resources/images/Logo.png" alt=""></h1>
+      <nav>
+        <div id="main_list_icon">
+          <div>
+            <a href="#" ><img src="/resources/images/Home.png" alt=""></a><span>홈</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Approval.png" alt=""></a><span>전자결재</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Attendance.png" alt=""></a><span>근태관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/calendar.png" alt=""></a><span>일정관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Address.png" alt=""></a><span>주소록</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Organization.png" alt=""></a><span>조직도</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Mail.png" alt=""></a><span>쪽지</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Messanger.png" alt=""></a><span>메신저</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/reservation.png" alt=""></a><span>자원예약</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/board.png" alt=""></a><span>게시판</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <h2 class="menu_schedule">일정관리</h2>
+        <div id="menu_1">
+          <a href="#"><img src="/resources/images/projectIcon.png" alt=""></a><span>프로젝트</span>
+        </div>
+        <div id="menu_2">
+          <a href="#"><img src="/resources/images/calendarIcon.png" alt=""></a><span>캘린더</span>
+        </div>
+ 
+
+   
+        
+        
+      </article>
+    </section>
+
+    <main>
+
+    <div class="project_detail_box">
+      <div class="pro_detail">
+        <div class="pro_info">
+          <div class="btns"><button class="edit_btn"><img src="/resources/images/editIcon 1.png" alt=""></button><button><img src="/resources/images/trash 1.png"</button></div>
+          <div class="project_title">프로젝트 제목</div>
+          <div class="pro_content">여기에는 내용이 들어갑니다.여기에는 내용이 들어갑니다 .여기에는 내용이 들어갑니다 .여기에는 내용이 들어갑니다 </div>
+          <div class="pro_attlist">
+            <div></div>
+          </div>
+
+        </div>
+        <div class="pro_progress">
+
+        </div>
+      </div>
+      <div class="pro_task">
+        <div class="todo"></div>
+        <div class="inprogress"></div>
+        <div class="done"></div>
+
+      </div>
+    </div>
+      
+
+    
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var allcalCheckbox = document.getElementById("allcal_checkbox");
+        var checkboxes = document.querySelectorAll(".cal_nav input[type='checkbox']");
+    
+        allcalCheckbox.addEventListener("change", function () {
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = allcalCheckbox.checked;
+          });
+        });
+    
+        checkboxes.forEach(function (checkbox) {
+          checkbox.addEventListener("change", function () {
+            // 전체일정 체크박스의 체크 여부 업데이트
+            allcalCheckbox.checked = areAllCheckboxesChecked();
+          });
+        });
+    
+        function areAllCheckboxesChecked() {
+          var allChecked = true;
+          checkboxes.forEach(function (checkbox) {
+            if (!checkbox.checked) {
+              allChecked = false;
+            }
+          });
+          return allChecked;
+        }
+      });
+    </script>
+    <script>
+      function toggleChartbox() {
+          // chartbox 요소 가져오기
+          var chartBox = document.querySelector(".chartbox");
+      
+          // chartbox가 보이는지 확인하여 상태 변경
+          if (chartBox.style.display === "none" || chartBox.style.display === "") {
+              chartBox.style.display = "block";
+          } else {
+              chartBox.style.display = "none";
+          }
+      }
+      </script>
+
+    
+    
+</body>
+</html>

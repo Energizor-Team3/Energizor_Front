@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/resources/js/common/header.js"></script>
+  <script src="/resources/js/common/contents.js"></script>
+  <script src="/resources/js/calendar/index.global.js"></script>
+  <link rel="stylesheet" href="/resources/css/common/header.css">
+  <link rel="stylesheet" href="/resources/css/project/pro_main.css">
+</head>
+<body>
+
+  <div id="wrap">
+    <header>
+      <h1><img src="/resources/images/Logo.png" alt=""></h1>
+      <nav>
+        <div id="main_list_icon">
+          <div>
+            <a href="#" ><img src="/resources/images/Home.png" alt=""></a><span>홈</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Approval.png" alt=""></a><span>전자결재</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Attendance.png" alt=""></a><span>근태관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/calendar.png" alt=""></a><span>일정관리</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Address.png" alt=""></a><span>주소록</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Organization.png" alt=""></a><span>조직도</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Mail.png" alt=""></a><span>쪽지</span>
+          </div>
+          <div>
+            <a href="#" ><img src="/resources/images/Messanger.png" alt=""></a><span>메신저</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/reservation.png" alt=""></a><span>자원예약</span>
+          </div>
+          <div>
+            <a href="#"><img src="/resources/images/board.png" alt=""></a><span>게시판</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <h2 class="menu_schedule">일정관리</h2>
+        <div id="menu_1">
+          <a href="#"><img src="/resources/images/projectIcon.png" alt=""></a><span>프로젝트</span>
+        </div>
+        <div id="menu_2">
+          <a href="#"><img src="/resources/images/calendarIcon.png" alt=""></a><span>캘린더</span>
+        </div>
+ 
+
+   
+        
+        
+      </article>
+    </section>
+
+    <main>
+      <div class="main_con">
+        <div class="container_1">
+          <button class="addpro_btn"><h1>+</h1><h3>프로젝트생성</h3></button>
+
+
+        </div>
+        <div class="container_2"  id="projectContainer">
+ 
+ 
+ 
+
+        </div>
+        
+      </div>
+
+     
+    </main>
+    <script>
+      // 색상 배열
+      const colors = [  '#CC86A8', '#C0A280' , '#DD7090', '#A5C8B4', '#A27792', 
+      '#7186BF', '#82A584', '#5556A6', '#5B6693', '#7C6673'];
+      let colorIndex = 0; // 색상 인덱스
+
+      // 버튼 
+      const addButton = document.querySelector('.addpro_btn');
+      // 프로젝트 컨테이너 요소
+      const projectContainer = document.getElementById('projectContainer');
+
+      addButton.addEventListener('click', () => {
+        // 새 프로젝트 요소 생성
+        const newProject = document.createElement('div');
+        newProject.classList.add('project');
+
+        // 색상 적용
+        newProject.style.backgroundColor = colors[colorIndex];
+        // 다음 색상 인덱스로 이동
+        colorIndex = (colorIndex + 1) % colors.length;
+
+        // 프로젝트 제목과 날짜 추가
+        newProject.innerHTML = `
+          <h3 class="project_title">프로젝트 제목</h3>
+          <h5 class="project_date">2024.1.1~2024.03.01</h5>
+        `;
+
+        // 프로젝트를 컨테이너에 추가
+        projectContainer.appendChild(newProject);
+      });
+    </script>
+
+ 
+    <script>
+      function toggleChartbox() {
+          // chartbox 요소 가져오기
+          var chartBox = document.querySelector(".chartbox");
+      
+          // chartbox가 보이는지 확인하여 상태 변경
+          if (chartBox.style.display === "none" || chartBox.style.display === "") {
+              chartBox.style.display = "block";
+          } else {
+              chartBox.style.display = "none";
+          }
+      }
+      </script>
+
+    
+    
+</body>
+</html>
